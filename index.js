@@ -3,6 +3,7 @@
 // подключение модулей
 const moment = require('moment');
 const Chart = require('chart.js');
+const numeral = require('numeral');
 
 // работа с Moment
 let date = moment().format('dddd, MMMM DD YYYY, h:mm:ss');
@@ -46,3 +47,8 @@ data: [0, 10, 5, 2, 20, 30, 45],
 
     options: {}
 });
+
+let str;
+str = numeral(1.25).format('0%');
+console.log(str);
+document.getElementById('main__numeral').innerHTML = `str: ${str}`;
